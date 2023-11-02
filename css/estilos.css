@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Moon+Dance&display=swap');
+
+body {
+    background-image: url(../imagenes/castillo.webp);
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    margin: 0%;
+    padding: 0%;
+}
+h1 {
+    color: goldenrod;
+    background-color: #6f1d1b;
+    text-align: center;
+    font-family: 'Moon Dance', cursive;
+    font-size: 50px;
+}
+
+h2 {
+    color: goldenrod;
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+    text-align: center;
+}
+
+p {
+    color: bisque;
+    font-size: 20px;
+    text-align: center;
+}
+/*barra menu*/ 
+.menu {
+    display: flex;
+    background-color: #6f1d1b;
+    justify-content: space-between;
+    font-family: 'Moon Dance', cursive;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 50px;
+}
+
+.logomenu {
+    display: flex;
+    align-content: center;
+}
+
+.menu img {
+    width: 130px;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.menu div h1 {
+    font-size: 40px;
+    color: goldenrod;
+    font-weight: bolder;
+    margin-left: 10px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 20px;
+    font-size: 40px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: goldenrod;
+}
+/*pie de pagina*/ 
+footer {
+    background-color: #6f1d1b;
+    border-radius: 10px;
+    display: grid;
+    grid-template-areas: "mapa clima legal";
+    height: 190px;
+    margin-top: 40px;
+}
+
+.infolegal {
+    grid-area: legal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h4 {
+    color: goldenrod;
+    font-size: 25px;
+    font-family: 'Moon Dance', cursive;
+}
+
+strong {
+    color: goldenrod;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: 'Dancing Script', cursive;
+}
+
+.cardcasas{
+    position: relative;
+    width: 200px;
+    height: 350px;
+    display: inline-block;
+    margin: 40px;
+}
+
+img{
+    height: 300px;
+    width: 250px;
+}
+
+.cardcasas div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+}
+
+.cardcasas .front {
+    transform: perspective(500px) rotateY(0deg);
+}
+
+.cardcasas .back {
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.cardcasas:hover .front {
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.cardcasas:hover .back {
+    transform: perspective(500px) rotateY(360deg);
+}
