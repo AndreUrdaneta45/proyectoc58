@@ -30,68 +30,42 @@ p {
     font-size: 20px;
     text-align: center;
 }
-/*barra menu*/ 
-.menu {
-    display: flex;
-    background-color: #6f1d1b;
-    justify-content: space-between;
-    font-family: 'Moon Dance', cursive;
-    align-items: center;
-    height: 100px;
-    margin-bottom: 50px;
-}
-
-.logomenu {
-    display: flex;
-    align-content: center;
-}
-
-.menu img {
-    width: 130px;
-    height: 100px;
-    margin-top: 10px;
-}
-
-.menu div h1 {
-    font-size: 40px;
-    color: goldenrod;
-    font-weight: bolder;
-    margin-left: 10px;
-}
-
-.menu ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-}
-
-.menu ul li {
-    margin: 20px;
-    font-size: 40px;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    color: goldenrod;
-}
 /*pie de pagina*/ 
 footer {
-    background-color: #6f1d1b;
+    background-color: #17202A;
     border-radius: 10px;
     display: grid;
-    grid-template-areas: "mapa clima legal";
+    grid-template-areas: "menu info redessociales";
     height: 190px;
     margin-top: 40px;
 }
-
-.infolegal {
-    grid-area: legal;
+.menu{
+    grid-area: menu;
+    display: flex;
+}
+.logomenu{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-content: center;
+    margin-left: 10px;
+    margin-top: 25px;
+}
+.info{
+    grid-area: info;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
+.redessociales{
+    grid-area: redessociales;
+    display: flex;
+    margin-right: 20px;
+}
+.redessociales li{
+    text-decoration: none;
+}
 h4 {
     color: goldenrod;
     font-size: 25px;
@@ -142,4 +116,79 @@ img{
 
 .cardcasas:hover .back {
     transform: perspective(500px) rotateY(360deg);
+}
+
+/*formulario de contacto*/ 
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.grupo {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-bottom: 20px;
+
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Moon Dance', cursive;
+    text-align: center;
+    font-size: 25px;
+    color: goldenrod;
+}
+
+input,
+textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 3px solid #6f1d1b;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.boton {
+    background-color: #6f1d1b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 40%;
+}
+
+.botongrupo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+/** boton hacia arriba **/ 
+#arriba{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid rgb(218, 85, 32);
+    background-color: rgb(238, 177, 21);
+    position: fixed;
+    left: 95%;
+    bottom: 50px;
+    cursor: pointer;
+    transition: all .3s ease;
+    transform: scale (0);
+}
+#arriba:hover{
+    border: 1px solid rgb(5, 92, 5);
+    background-color: rgb(13, 158, 49);
+    transform: scale(1.1);
+}
+.bi-chevron-double-up{
+    font-size:  15px;
 }
